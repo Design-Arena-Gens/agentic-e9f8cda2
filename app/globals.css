@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 240 6% 97%;
+  --surface-foreground: 240 5% 10%;
+  --border: 240 6% 90%;
+  --muted: 240 5% 64.9%;
+  --muted-foreground: 240 4% 46.1%;
+  --primary: 222 89% 62%;
+  --primary-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+}
+
+html,
+body {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: hsl(var(--surface));
+}
+
+body {
+  color: hsl(var(--surface-foreground));
+  font-family: var(--font-sans, system-ui), sans-serif;
+}
+
+.dark {
+  --surface: 222 47% 11%;
+  --surface-foreground: 210 40% 98%;
+  --border: 217 19% 27%;
+  --muted: 223 47% 21%;
+  --muted-foreground: 215 20% 65%;
+  --primary: 222 89% 62%;
+  --primary-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  background: hsl(var(--surface));
+}
+
+.bg-grid {
+  background-image: radial-gradient(circle at center, rgba(79, 70, 229, 0.15) 0, rgba(79, 70, 229, 0) 55%);
+  background-size: 200% 200%;
+  animation: bgPulse 10s ease infinite;
+}
+
+@keyframes bgPulse {
+  0%,
+  100% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 60% 45%;
+  }
+}
